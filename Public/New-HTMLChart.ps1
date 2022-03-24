@@ -30,7 +30,9 @@
         [alias('GradientColors')][switch] $Gradient,
         [alias('PatternedColors')][switch] $Patterned,
         [string] $Id,
-        [string] $Group
+        [string] $Group,
+        
+        [bool]$LineDataLabelEnabled
     )
     $Script:HTMLSchema.Features.MainFlex = $true
 
@@ -81,7 +83,7 @@
 
     # defaults
     $DataLabel = [ordered] @{
-        enabled = $true
+        enabled = $LineDataLabelEnabled
     }
     $Markers = [ordered] @{}
 
